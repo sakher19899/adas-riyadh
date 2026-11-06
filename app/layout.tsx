@@ -45,9 +45,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://adas-center.com",
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
     generator: 'v0.app'
 }
 
@@ -59,8 +56,8 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/icon.svg" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <meta name="theme-color" content="#1e293b" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>

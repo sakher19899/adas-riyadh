@@ -37,21 +37,15 @@ export default function Contact() {
     `.trim()
 
     const whatsappUrl = `https://wa.me/966500849798?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, "_blank")
-
-    toast({
-      title: "تم إرسال الطلب بنجاح ✅",
-      description: "سيتم التواصل معك في أقرب وقت ممكن",
-    })
-
-    // Reset form
-    setFormData({
-      name: "",
-      phone: "",
-      carType: "",
-      service: "",
-      message: "",
-    })
+    const opened = window.open(whatsappUrl, "_blank")
+    if (opened) {
+      toast({
+        title: "تم فتح واتساب",
+        description: "اضغط إرسال داخل واتساب لإتمام طلبك.",
+      })
+    } else {
+      window.location.href = whatsappUrl
+    }
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -161,7 +155,7 @@ export default function Contact() {
                   <Label htmlFor="service" className="text-slate-700 font-semibold text-base">
                     الخدمة المطلوبة *
                   </Label>
-                  <Select onValueChange={(value) => handleInputChange("service", value)} required>
+                  <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)} required>
                     <SelectTrigger className="input-enhanced text-lg">
                       <SelectValue placeholder="اختر الخدمة المطلوبة" />
                     </SelectTrigger>

@@ -19,7 +19,7 @@ export default function ServicesClientPage() {
       features: ["معايرة دقيقة 100%", "أجهزة حديثة معتمدة", "فنيين مختصين", "ضمان الجودة", "تقرير مفصل"],
       price: "ابتداءً من 300 ريال",
       duration: "30-60 دقيقة",
-      image: "/adas-calibration.png",
+      image: "/placeholder.svg",
       color: "from-blue-500 to-cyan-500",
       badge: "الأكثر طلباً",
     },
@@ -30,7 +30,7 @@ export default function ServicesClientPage() {
       features: ["فحص ما قبل الشراء", "تقرير مفصل 50+ نقطة", "فحص إلكتروني", "فحص ميكانيكي", "توصيات الصيانة"],
       price: "ابتداءً من 150 ريال",
       duration: "45-90 دقيقة",
-      image: "/car-inspection-tools.png",
+      image: "/placeholder.svg",
       color: "from-green-500 to-emerald-500",
       badge: "شامل",
     },
@@ -41,7 +41,7 @@ export default function ServicesClientPage() {
       features: ["بدون ضرر نهائياً", "جميع أنواع السيارات", "خدمة سريعة", "متوفر 24/7", "فنيين خبراء"],
       price: "ابتداءً من 100 ريال",
       duration: "5-15 دقيقة",
-      image: "/placeholder-zt3y0.png",
+      image: "/placeholder.svg",
       color: "from-purple-500 to-pink-500",
       badge: "طوارئ 24/7",
     },
@@ -52,7 +52,7 @@ export default function ServicesClientPage() {
       features: ["مفاتيح ذكية", "مفاتيح عادية", "برمجة فورية", "جميع الماركات", "ضمان سنة"],
       price: "ابتداءً من 200 ريال",
       duration: "15-30 دقيقة",
-      image: "/smart-car-key-programming.png",
+      image: "/placeholder.svg",
       color: "from-orange-500 to-red-500",
       badge: "تقنية متقدمة",
     },
@@ -63,7 +63,7 @@ export default function ServicesClientPage() {
       features: ["قراءة جميع الأعطال", "تشخيص دقيق", "حلول سريعة", "أجهزة متطورة", "مسح الأعطال"],
       price: "ابتداءً من 80 ريال",
       duration: "20-40 دقيقة",
-      image: "/placeholder-7srvs.png",
+      image: "/placeholder.svg",
       color: "from-teal-500 to-blue-500",
       badge: "تشخيص دقيق",
     },
@@ -180,7 +180,7 @@ export default function ServicesClientPage() {
                       <Button
                         className="flex-1 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600"
                         onClick={() =>
-                          window.open(`https://wa.me/966500849798?text=أريد حجز موعد لخدمة: ${service.title}`, "_blank")
+                          window.open(`https://wa.me/966500849798?text=${encodeURIComponent(`أريد حجز موعد لخدمة: ${service.title}`)}`, "_blank")
                         }
                       >
                         احجز الآن

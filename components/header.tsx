@@ -21,6 +21,8 @@ export default function Header() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
       setIsMenuOpen(false)
+    } else {
+      window.location.assign(id === "home" ? "/" : `/#${id}`)
     }
   }
 

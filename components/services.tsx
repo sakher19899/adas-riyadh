@@ -181,7 +181,7 @@ export default function Services() {
                     <Button
                       className="flex-1 btn-secondary"
                       onClick={() =>
-                        window.open(`https://wa.me/966500849798?text=أريد حجز موعد لخدمة: ${service.title}`, "_blank")
+                        window.open(`https://wa.me/966500849798?text=${encodeURIComponent(`أريد حجز موعد لخدمة: ${service.title}`)}`, "_blank")
                       }
                     >
                       احجز الآن

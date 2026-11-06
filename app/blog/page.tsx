@@ -10,6 +10,7 @@ import { Calendar, User, ArrowLeft, Radar, Car, Key, Wrench } from "lucide-react
 import Image from "next/image"
 
 export const metadata: Metadata = {
+  alternates: { canonical: `https://adas-center.com/blog` },
   title: "المدونة التقنية | مركز فحص وبرمجة السيارات المتقدم",
   description: "اقرأ أحدث المقالات التقنية حول ADAS وصيانة السيارات ونصائح مفيدة من خبرائنا",
   keywords: "مدونة تقنية, ADAS, صيانة السيارات, نصائح السيارات, تقنيات حديثة",
@@ -278,22 +279,6 @@ export default function BlogPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-500 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">اشترك في نشرتنا التقنية</h2>
-          <p className="text-xl mb-8 opacity-90">احصل على أحدث المقالات والنصائح التقنية مباشرة في بريدك الإلكتروني</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="بريدك الإلكتروني"
-              className="flex-1 px-4 py-3 rounded-full text-slate-900 text-right"
-            />
-            <Button className="bg-white text-blue-600 hover:bg-slate-100 px-8 py-3 rounded-full">اشترك الآن</Button>
           </div>
         </div>
       </section>
